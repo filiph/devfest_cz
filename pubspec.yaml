@@ -1,0 +1,61 @@
+name: devfest_cz
+description: A new Flutter application.
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# Read more about versioning at semver.org.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  nima: ^1.0.1
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+# For information on the generic Dart part of this file, see the
+# following page: https://www.dartlang.org/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+  uses-material-design: true
+
+  assets:
+    - pics/1842.jpg
+    - pics/arch0.png
+    - pics/arch1.png
+    - pics/devfest-logo.png
+    - pics/Robot.nima
+    - pics/Robot.png
+    - pics/top-apps.png
+    - pics/web.png
+    - pics/Wolf.nima
+    - pics/Wolf0.png
+    - pics/Wolf1.png
+    - pics/Wolf2.png
+
+  fonts:
+    - family: PirataOne
+      fonts:
+        - asset: fonts/Pirata_One/PirataOne-Regular.ttf
+    - family: IMFellGreatPrimer
+      fonts:
+        - asset: fonts/IM_Fell_Great_Primer/IMFeGPrm28P.ttf
+    - family: Cormorant
+      fonts:
+        - asset: fonts/Cormorant_Unicase/CormorantUnicase-Bold.ttf
+          weight: 700
