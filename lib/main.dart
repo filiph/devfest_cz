@@ -1,7 +1,7 @@
 import 'package:devfest_cz/pages/homepage.dart';
+import 'package:devfest_cz/pages/infinite_scroll.dart';
 import 'package:devfest_cz/pages/nima.dart';
 import 'package:devfest_cz/pages/pic_slide.dart';
-import 'package:devfest_cz/pages/pong.dart';
 import 'package:devfest_cz/pages/slide.dart';
 import 'package:devfest_cz/pages/splash.dart';
 import 'package:devfest_cz/swiper.dart';
@@ -75,7 +75,7 @@ class MyApp extends StatelessWidget {
               ),
             ),
             NimaSlide(),
-            Pong(),
+            InfiniteScroll(),
           ],
         ),
       ),

@@ -50,11 +50,20 @@ class SwiperState extends State<Swiper> {
   void initState() {
     super.initState();
     if (widget.moveToEnd) {
-      Timer(const Duration(milliseconds: 50), () {
-        controller.animateToPage(widget.children.length - 1,
-            duration: const Duration(milliseconds: 500), curve: Curves.easeOut);
-      });
+      _waitThenScrollToEnd();
     }
+  }
+
+  Future<void> _waitThenScrollToEnd() async {
+    // Wait until the app is running.
+    while (widget?.children?.length == null || !controller.hasClients) {
+      await Future.delayed(const Duration(milliseconds: 100));
+    }
+    controller.animateToPage(
+      widget.children.length - 1,
+      duration: const Duration(milliseconds: 500),
+      curve: Curves.easeOut,
+    );
   }
 
   void _handleLongPress() {
