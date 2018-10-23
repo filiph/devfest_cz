@@ -56,7 +56,9 @@ class SwiperState extends State<Swiper> {
 
   Future<void> _waitThenScrollToEnd() async {
     // Wait until the app is running.
-    while (widget?.children?.length == null || !controller.hasClients) {
+    while (widget?.children?.length == null ||
+        !controller.hasClients ||
+        !controller.hasListeners) {
       await Future.delayed(const Duration(milliseconds: 100));
     }
     controller.animateToPage(
