@@ -2,6 +2,13 @@ import 'package:devfest_cz/style/style.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
+  final String title;
+
+  SplashScreen(
+    this.title, {
+    Key key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -24,7 +31,7 @@ class SplashScreen extends StatelessWidget {
               children: <Widget>[
                 SizedBox(height: 32.0),
                 Text(
-                  'Things you didn’t know\nabout Flutter',
+                  title,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'Cormorant',

@@ -6,6 +6,7 @@ import 'package:devfest_cz/pages/homepage.dart';
 import 'package:devfest_cz/pages/infinite_scroll.dart';
 import 'package:devfest_cz/pages/nima.dart';
 import 'package:devfest_cz/pages/pic_slide.dart';
+import 'package:devfest_cz/pages/refresh_indicator.dart';
 import 'package:devfest_cz/pages/slide.dart';
 import 'package:devfest_cz/pages/splash.dart';
 import 'package:devfest_cz/slide_deck.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
     return SlideDeck(
       moveToEnd: true,
       children: [
-        SplashScreen(),
+        SplashScreen('Things you didn’t know\nabout Flutter'),
         MyHomePage(title: 'Hello DevFest CZ'),
         Slide('Where does it come from?'),
         Slide('Most code was written in 1842.'),
@@ -112,12 +113,13 @@ class MyApp extends StatelessWidget {
         Slide('GestureArena'),
         GestureArenaDemo(),
         Slide('RefreshIndicator'),
+        RefreshIndicatorSlide(),
         Slide('SafeArea'),
         Slide('Hero'),
         Slide('Wrap'),
         Slide('SliverAppBar'),
         Slide('BackdropFilter'),
-        SplashScreen(),
+        SplashScreen('Thank you!'),
       ],
     );
   }
