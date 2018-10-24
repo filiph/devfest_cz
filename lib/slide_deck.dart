@@ -2,24 +2,24 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-class Swiper extends StatefulWidget {
+class SlideDeck extends StatefulWidget {
   final List<Widget> children;
 
   final bool moveToEnd;
 
-  Swiper({
+  SlideDeck({
     Key key,
     @required this.children,
     this.moveToEnd = false,
   }) : super(key: key);
 
   @override
-  SwiperState createState() {
-    return SwiperState();
+  SlideDeckState createState() {
+    return SlideDeckState();
   }
 }
 
-class SwiperState extends State<Swiper> {
+class SlideDeckState extends State<SlideDeck> {
   PageController controller = PageController(viewportFraction: 0.9);
 
   BuildContext _context;
