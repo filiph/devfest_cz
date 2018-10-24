@@ -1,3 +1,4 @@
+import 'package:devfest_cz/pages/animated_container.dart';
 import 'package:devfest_cz/pages/compute.dart';
 import 'package:devfest_cz/pages/homepage.dart';
 import 'package:devfest_cz/pages/infinite_scroll.dart';
@@ -104,6 +105,7 @@ class MyApp extends StatelessWidget {
         Slide('Isolates'),
         ComputeSlide(),
         Slide('Widgets'),
+        AnimatedContainerSlide(),
         Slide('AnimatedWidget'),
       ],
     );

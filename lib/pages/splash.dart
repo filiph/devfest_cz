@@ -1,3 +1,4 @@
+import 'package:devfest_cz/style/style.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -35,9 +36,7 @@ class SplashScreen extends StatelessWidget {
                 SizedBox(height: 32.0),
                 Text(
                   'Filip Hráček, Google',
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
+                  style: normal,
                 )
               ],
             ),

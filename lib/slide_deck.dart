@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:devfest_cz/style/style.dart';
 import 'package:flutter/material.dart';
 
 class SlideDeck extends StatefulWidget {
@@ -30,11 +31,7 @@ class SlideDeckState extends State<SlideDeck> {
   Widget build(BuildContext context) {
     _context = context;
     return DefaultTextStyle(
-      style: TextStyle(
-        fontFamily: 'IMFellGreatPrimer',
-        fontSize: 32.0,
-        fontWeight: FontWeight.bold,
-      ),
+      style: medieval,
       child: GestureDetector(
         onLongPress: _handleLongPress,
         onScaleEnd: _handleScale,
