@@ -88,6 +88,18 @@ class MyApp extends StatelessWidget {
         Slide('How can this be fast?'),
         Slide('Dart'),
         PicSlide('erik-meijer.png'),
+        StreamBuilder<int>(
+          stream: (() async* {})(),
+          initialData: 0,
+          builder: (context, snapshot) {
+            return Container(
+              color: Colors.lightBlue,
+              child: Center(
+                child: Text('Number ${snapshot.data}'),
+              ),
+            );
+          },
+        ),
         Slide('Widgets'),
         Slide('AnimatedWidget'),
       ],

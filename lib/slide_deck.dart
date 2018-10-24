@@ -29,13 +29,20 @@ class SlideDeckState extends State<SlideDeck> {
   @override
   Widget build(BuildContext context) {
     _context = context;
-    return GestureDetector(
-      onLongPress: _handleLongPress,
-      onScaleEnd: _handleScale,
-      child: PageView(
-        pageSnapping: _pageSnapping,
-        controller: controller,
-        children: widget.children,
+    return DefaultTextStyle(
+      style: TextStyle(
+        fontFamily: 'IMFellGreatPrimer',
+        fontSize: 32.0,
+        fontWeight: FontWeight.bold,
+      ),
+      child: GestureDetector(
+        onLongPress: _handleLongPress,
+        onScaleEnd: _handleScale,
+        child: PageView(
+          pageSnapping: _pageSnapping,
+          controller: controller,
+          children: widget.children,
+        ),
       ),
     );
   }
