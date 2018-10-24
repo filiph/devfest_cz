@@ -1,3 +1,4 @@
+import 'package:devfest_cz/pages/compute.dart';
 import 'package:devfest_cz/pages/homepage.dart';
 import 'package:devfest_cz/pages/infinite_scroll.dart';
 import 'package:devfest_cz/pages/nima.dart';
@@ -89,8 +90,8 @@ class MyApp extends StatelessWidget {
         Slide('Dart'),
         PicSlide('erik-meijer.png'),
         StreamBuilder<int>(
-          stream: (() async* {})(),
-          initialData: 0,
+          stream: (() async* {})().asBroadcastStream(),
+          initialData: 1,
           builder: (context, snapshot) {
             return Container(
               color: Colors.lightBlue,
@@ -100,6 +101,8 @@ class MyApp extends StatelessWidget {
             );
           },
         ),
+        Slide('Isolates'),
+        ComputeSlide(),
         Slide('Widgets'),
         Slide('AnimatedWidget'),
       ],
