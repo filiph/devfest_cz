@@ -1,6 +1,7 @@
 import 'package:devfest_cz/pages/animated_container.dart';
 import 'package:devfest_cz/pages/animated_font.dart';
 import 'package:devfest_cz/pages/compute.dart';
+import 'package:devfest_cz/pages/gesture_arena.dart';
 import 'package:devfest_cz/pages/homepage.dart';
 import 'package:devfest_cz/pages/infinite_scroll.dart';
 import 'package:devfest_cz/pages/nima.dart';
@@ -109,6 +110,7 @@ class MyApp extends StatelessWidget {
         AnimatedContainerSlide(),
         AnimatedFontSlide(),
         Slide('GestureArena'),
+        GestureArenaDemo(),
         Slide('RefreshIndicator'),
         Slide('SafeArea'),
         Slide('Hero'),
