@@ -59,10 +59,9 @@ class SlideDeckState extends State<SlideDeck> {
   }
 
   Future<void> _waitThenScrollToEnd() async {
+    await Future.delayed(const Duration(milliseconds: 500));
     // Wait until the app is running.
-    while (widget?.children?.length == null ||
-        !controller.hasClients ||
-        !controller.hasListeners) {
+    while (widget?.children?.length == null || !controller.hasClients) {
       await Future.delayed(const Duration(milliseconds: 100));
     }
     controller.animateToPage(
