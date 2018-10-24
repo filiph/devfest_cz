@@ -2,6 +2,7 @@ import 'package:devfest_cz/pages/animated_container.dart';
 import 'package:devfest_cz/pages/animated_font.dart';
 import 'package:devfest_cz/pages/compute.dart';
 import 'package:devfest_cz/pages/gesture_arena.dart';
+import 'package:devfest_cz/pages/hero.dart';
 import 'package:devfest_cz/pages/homepage.dart';
 import 'package:devfest_cz/pages/infinite_scroll.dart';
 import 'package:devfest_cz/pages/nima.dart';
@@ -116,6 +117,7 @@ class MyApp extends StatelessWidget {
         RefreshIndicatorSlide(),
         Slide('SafeArea'),
         Slide('Hero'),
+        HeroSlide(),
         Slide('Wrap'),
         Slide('SliverAppBar'),
         Slide('BackdropFilter'),
