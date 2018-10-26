@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
         SplashScreen('Things you didn’t know\nabout Flutter'),
         MyHomePage(),
         Slide('Most code was written in 1842.'),
-        PicSlide('1842.jpg'),
+        PicSlide('1842.jpg', backgroundColor: Colors.black),
         Slide('Where does it come from?'),
         Slide('Google Chrome'),
         Slide('How much can we remove\n'
@@ -63,6 +63,7 @@ class MyApp extends StatelessWidget {
         InfiniteScroll(),
         Slide('Building from scratch,\nall the time.'),
         Slide('How can this be fast?'),
+        PicSlide('tree.png'),
         Slide('Dart'),
         PicSlide('erik-meijer.png'),
         AsyncGeneratorDemo(),
