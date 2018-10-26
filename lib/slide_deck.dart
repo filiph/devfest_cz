@@ -85,13 +85,16 @@ class SlideDeckState extends State<SlideDeck> {
 
   Widget _dialogBuilder(BuildContext context) {
     double currentPage = controller.page.roundToDouble();
-    return Dialog(
-      child: StatefulBuilder(
-        builder: (context, setState) => Padding(
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 50.0),
+      child: Dialog(
+        child: StatefulBuilder(
+          builder: (context, setState) {
+            return Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
                 children: <Widget>[
-                  SizedBox(height: 100.0),
+                  SizedBox(height: 70.0),
                   Text("Slide: ${currentPage.round()}"),
                   Slider(
                     value: currentPage,
@@ -106,9 +109,20 @@ class SlideDeckState extends State<SlideDeck> {
                       controller.jumpToPage(index.round());
                     },
                   ),
+                  SizedBox(height: 20.0),
+                  MaterialButton(
+                    color: Colors.blue,
+                    onPressed: () => Navigator.of(context).pop(),
+                    child: Text(
+                      'CLOSE',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  )
                 ],
               ),
-            ),
+            );
+          },
+        ),
       ),
     );
   }

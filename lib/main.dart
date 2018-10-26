@@ -47,6 +47,7 @@ class MyApp extends StatelessWidget {
         PicSlide('arch0.png'),
         Slide('Native, or native?'),
         PicSlide('arch1.png'),
+        Slide('Machine code\n&\nOpenGL / Vulcan'),
         Slide('Flutter is a game engine,\nfor apps.'),
         ListViewDemo(),
         NimaSlide('Wolf', 'Run', backgroundColor: Colors.lightBlue),
