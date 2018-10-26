@@ -34,7 +34,6 @@ class MyApp extends StatelessWidget {
 
   Widget _buildSlideDeck() {
     return SlideDeck(
-      moveToEnd: true,
       children: [
         SplashScreen('Things you didn’t know\nabout Flutter'),
         MyHomePage(),
