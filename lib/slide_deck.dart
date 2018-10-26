@@ -79,7 +79,6 @@ class SlideDeckState extends State<SlideDeck> {
   }
 
   void _handleScale(ScaleEndDetails details) {
-    print(details.velocity.pixelsPerSecond);
     showDialog(context: _context, builder: _dialogBuilder);
   }
 
@@ -111,7 +110,7 @@ class SlideDeckState extends State<SlideDeck> {
                   ),
                   SizedBox(height: 20.0),
                   MaterialButton(
-                    color: Colors.blue,
+                    color: Colors.lightBlue,
                     onPressed: () => Navigator.of(context).pop(),
                     child: Text(
                       'CLOSE',
