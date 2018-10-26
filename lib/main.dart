@@ -1,5 +1,6 @@
 import 'package:devfest_cz/pages/animated_container.dart';
 import 'package:devfest_cz/pages/animated_font.dart';
+import 'package:devfest_cz/pages/async_generator.dart';
 import 'package:devfest_cz/pages/compute.dart';
 import 'package:devfest_cz/pages/gesture_arena.dart';
 import 'package:devfest_cz/pages/hero.dart';
@@ -64,18 +65,7 @@ class MyApp extends StatelessWidget {
         Slide('How can this be fast?'),
         Slide('Dart'),
         PicSlide('erik-meijer.png'),
-        StreamBuilder<int>(
-          stream: (() async* {})().asBroadcastStream(),
-          initialData: 1,
-          builder: (context, snapshot) {
-            return Container(
-              color: Colors.lightBlue,
-              child: Center(
-                child: Text('Number ${snapshot.data}'),
-              ),
-            );
-          },
-        ),
+        AsyncGeneratorDemo(),
         Slide('Isolates'),
         ComputeSlide(),
         Slide('Widgets'),
