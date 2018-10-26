@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
-  final String title;
-
-  MyHomePage({Key key, this.title}) : super(key: ValueKey(title));
-
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -16,7 +12,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text('Flutter Demo Home Page'),
       ),
       body: Center(
         child: Column(

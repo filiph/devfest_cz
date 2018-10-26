@@ -35,10 +35,10 @@ class MyApp extends StatelessWidget {
       moveToEnd: true,
       children: [
         SplashScreen('Things you didn’t know\nabout Flutter'),
-        MyHomePage(title: 'Hello DevFest CZ'),
-        Slide('Where does it come from?'),
+        MyHomePage(),
         Slide('Most code was written in 1842.'),
         PicSlide('1842.jpg'),
+        Slide('Where does it come from?'),
         Slide('Google Chrome'),
         Slide('How much can we remove\n'
             'from the web platform?'),
@@ -85,7 +85,7 @@ class MyApp extends StatelessWidget {
           angle: -0.1,
           child: Padding(
             padding: EdgeInsets.symmetric(vertical: 50.0, horizontal: 200.0),
-            child: MyHomePage(title: 'App in an app'),
+            child: MyHomePage(),
           ),
         ),
         Slide('There is only one code path.'),
@@ -116,11 +116,10 @@ class MyApp extends StatelessWidget {
         Slide('RefreshIndicator'),
         RefreshIndicatorSlide(),
         Slide('SafeArea'),
+        Slide('Acessibility'),
         Slide('Hero'),
         HeroSlide(),
-        Slide('Wrap'),
-        Slide('SliverAppBar'),
-        Slide('BackdropFilter'),
+        Slide('PageView'),
         SplashScreen('Thank you!'),
       ],
     );
