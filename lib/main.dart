@@ -5,6 +5,7 @@ import 'package:devfest_cz/pages/gesture_arena.dart';
 import 'package:devfest_cz/pages/hero.dart';
 import 'package:devfest_cz/pages/homepage.dart';
 import 'package:devfest_cz/pages/infinite_scroll.dart';
+import 'package:devfest_cz/pages/listview.dart';
 import 'package:devfest_cz/pages/nima.dart';
 import 'package:devfest_cz/pages/pic_slide.dart';
 import 'package:devfest_cz/pages/refresh_indicator.dart';
@@ -47,25 +48,7 @@ class MyApp extends StatelessWidget {
         Slide('Native, or native?'),
         PicSlide('arch1.png'),
         Slide('Flutter is a game engine,\nfor apps.'),
-        Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.deepOrange,
-            leading: Icon(Icons.airport_shuttle),
-            title: Text('Platform specific'),
-          ),
-          body: Container(
-            color: Colors.white,
-            child: ListView.builder(
-              padding: const EdgeInsets.only(left: 18.0, top: 20.0),
-              itemBuilder: (context, index) {
-                return ListTile(
-                  leading: Icon(Icons.description),
-                  title: Text("List item #$index"),
-                );
-              },
-            ),
-          ),
-        ),
+        ListViewDemo(),
         NimaSlide('Wolf', 'Run', backgroundColor: Colors.lightBlue),
         NimaSlide('Robot', 'Flight', backgroundColor: Colors.black),
         Slide('Why this way?'),
@@ -74,21 +57,8 @@ class MyApp extends StatelessWidget {
         PicSlide('web.png'),
         Slide('Debug x Production'),
         Slide('Composition over Inheritance'),
-        Transform.rotate(
-          angle: 0.2,
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Slide('‘Extreme\nComposition over Inheritance’'),
-          ),
-        ),
-        Transform.rotate(
-          angle: -0.1,
-          child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 50.0, horizontal: 200.0),
-            child: MyHomePage(),
-          ),
-        ),
-        Slide('There is only one code path.'),
+        Slide('Extreme\nComposition over Inheritance'),
+        Slide('Only one code path.'),
         InfiniteScroll(),
         Slide('Building from scratch,\nall the time.'),
         Slide('How can this be fast?'),
