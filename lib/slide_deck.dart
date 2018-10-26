@@ -25,8 +25,6 @@ class SlideDeckState extends State<SlideDeck> {
 
   BuildContext _context;
 
-  bool _pageSnapping = true;
-
   @override
   Widget build(BuildContext context) {
     _context = context;
@@ -36,7 +34,6 @@ class SlideDeckState extends State<SlideDeck> {
         onLongPress: _handleLongPress,
         onScaleEnd: _handleScale,
         child: PageView(
-          pageSnapping: _pageSnapping,
           controller: controller,
           children: widget.children,
         ),
